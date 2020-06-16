@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="UBudgetApp.AddBudgetPage">
+    
+    <RelativeLayout >
+        <Image Source="Assets/Icons/bb.png" Aspect="Fill" />
+        <StackLayout Margin="25">
+            <Label Text="Please enter your desired budget amount:" FontSize="22" />
+            <Entry x:Name="BudgetAmountEntry" Keyboard="Numeric"
+                Placeholder="Amount in USD" FontSize="Large" />
+            <Button Text="Save" Clicked="SaveBudgetButton_Clicked"/>
+            <Button Text="Cancel" Clicked="CancelButton_Clicked" />
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

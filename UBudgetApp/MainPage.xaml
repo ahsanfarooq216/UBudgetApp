@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:model="clr-namespace:UBudgetApp.Model"
+             mc:Ignorable="d"
+             x:Class="UBudgetApp.MainPage">
+
+
+    <RelativeLayout>
+        <Image Source="Assets/Icons/bb.png" Aspect="Fill" />
+        <StackLayout x:Name="TotalBudgetStack" >
+            <ListView x:Name="BudgetView" RowHeight="175" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Budget">
+                        <ViewCell>
+                            <Grid Margin="25">
+                                <Label Text="Total Budget: " Margin="10,0,0,0"
+                                       FontSize="Large"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Center" />
+                                <Label Text="{Binding BudgetAmount, StringFormat='$ {0}'}" Margin="0,0,10,0"
+                                       FontSize="Large" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                                <Label Text="Total Expenses: " Margin="10,0,0,0"
+                                       FontSize="Large" Grid.Row="1"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Center" />
+                                <Label Text="{Binding TotalExpenses}" Margin="0,0,10,0" Grid.Row="1"
+                                       FontSize="Large" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                                <Label Text="Balance: " Margin="10,0,0,0"
+                                       FontSize="Large" Grid.Row="2"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Center" />
+                                <Label Text="{Binding RemainingBudget}" Margin="0,0,10,0" Grid.Row="2"
+                                       FontSize="Large" Grid.Column="1" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="MessageStack" VerticalOptions="CenterAndExpand" Margin="25">
+                <Label Text="You haven't set a budget yet. Please set a budget" x:Name="Message" FontSize="22" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <Button Text="Set/Edit Budget" x:Name="SetBudgetButton" Clicked="SetBudgetButton_Clicked" Margin="25,0,25,0"/>
+            <!--<Button x:Name="AddExpenseButton" Text="Add Expense" Clicked="AddExpenseButton_Clicked"/>-->
+            <Button x:Name="ExpenseListButton" Text="Add/View Expenses" Clicked="ExpenseListButton_Clicked" Margin="25,0,25,0" />
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

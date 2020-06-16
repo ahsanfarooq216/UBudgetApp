@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:UBudgetApp"
+             mc:Ignorable="d"
+             x:Class="UBudgetApp.AddExpense">
+
+    <ContentPage.BindingContext>
+        <local:AddExpenseViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="Assets/Icons/bb.png" Aspect="Fill" />
+            <StackLayout Margin="25" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                <Entry Placeholder="Expense Name" x:Name="NameEntry"
+                       Text="{Binding ExpenseName}" 
+                       FontSize="Medium"
+                       PlaceholderColor="Gray"/>
+
+                <Entry Placeholder="Amount in USD" x:Name="AmountEntry"
+                       Text="{Binding Amount}" Keyboard="Numeric"
+                       FontSize="Medium"
+                       PlaceholderColor="Gray"/>
+
+                <Label Text="Date of Purchase"  
+                           FontSize="Medium"/>
+                <DatePicker x:Name="DatePicker"
+                            MinimumDate="01/01/2018"
+                            MaximumDate="01/01/2021" 
+                            DateSelected="SelectedDatePicker_DateSelected" />
+
+                <Label Text="Select Category" 
+                           FontSize="Medium" />
+                <Picker  x:Name="CategoryPicker" 
+                            FontSize="Medium"
+                            HorizontalOptions="FillAndExpand"
+                        SelectedItem="{Binding Category}" >
+                    <Picker.Items>
+                        <x:String>Eating Out</x:String>
+                        <x:String>Entertainment</x:String>
+                        <x:String>Education</x:String>
+                        <x:String>Shopping</x:String>
+                        <x:String>Personal Care</x:String>
+                        <x:String>Health</x:String>
+                        <x:String>Kids</x:String>
+                        <x:String>Utilities</x:String>
+                        <x:String>Transport</x:String>
+                        <x:String>Travel</x:String>
+                        <x:String>Gifts</x:String>
+                        <x:String>Miscellaneous</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+                <Button Text="Delete" Clicked="OnDeleteButtonClicked" />
+                <Button Text="Cancel" Clicked="OnCancelButton_Clicked"/>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,17 @@
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\bin\Debug\netstandard2.0\UBudgetApp.deps.json
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\bin\Debug\netstandard2.0\UBudgetApp.dll
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\bin\Debug\netstandard2.0\ref\UBudgetApp.dll
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\bin\Debug\netstandard2.0\UBudgetApp.pdb
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.csprojAssemblyReference.cache
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\AddBudgetPage.xaml.g.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\AddExpense.xaml.g.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\ExpenseListPage.xaml.g.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.AssemblyInfoInputs.cache
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.AssemblyInfo.cs
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.csproj.CoreCompileInputs.cache
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.dll
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\ref\UBudgetApp.dll
+C:\Users\Ahsan\Desktop\final\UBudgetApp-master\UBudgetApp\UBudgetApp\UBudgetApp\obj\Debug\netstandard2.0\UBudgetApp.pdb

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:UBudgetApp"
+             mc:Ignorable="d"
+             x:Class="UBudgetApp.ExpenseListPage">
+
+
+    <ContentPage.BindingContext>
+        <local:ExpenseListViewModel></local:ExpenseListViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RelativeLayout >
+            <Image Source="Assets/Icons/bb.png" Aspect="Fill" />
+            <StackLayout>                
+                <Button Text="Back" Clicked="BackButton_Clicked" Margin="25,0,25,0" />
+                <Button Text="Add Expense"  Clicked="AddExpenseButtonClicked" Margin="25,0,25,0" />
+                <!--Button Text="Remove Expense" Command="{Binding RemoveExpenseCommand}"></>
+                <Button Text="Update Expense" Command="{Binding UpdateExpenseCommand}"></Button-->
+
+                <ListView ItemsSource="{Binding Expenses}" x:Name="listView" ItemSelected="listView_ItemSelected"
+                          SelectedItem="{Binding SelectedExpense}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding ExpenseName}"
+                                               FontSize="Medium"
+                                               Grid.Column="2" 
+                                               FontAttributes="Bold" 
+                                               VerticalTextAlignment="Center"  ></Label>
+
+                                    <Label Text="{Binding Amount,StringFormat='${0}'}"
+                                               FontSize="Medium"
+                                               Grid.Column="4"  
+                                               FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"></Label>
+
+                                    <Label Text="{Binding Category}" 
+                                               FontSize="Medium"
+                                               FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"
+                                               Grid.Column="1"  ></Label>
+
+                                    <!--Label x:Name="Label"  Text="{Binding Date,StringFormat=dd/MM/yyyy}"
+                                           Grid.Column="3"></-->
+
+
+                                    <Image Source="{Binding PictureUrl}"
+                                               VerticalOptions="Start" 
+                                               HorizontalOptions="Start"
+                                               Grid.Column="0" ></Image>
+
+                                    <!--Image Source="Assets/Icons/delete.jpg"
+                                               Grid.Column="5"-->
+                                    <!--<Image Source="trash1.jpg" Grid.Column="5">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="RemoveTapGestureRecognizerTapped"
+                                                                  CommandParameter="{Binding ExpenseId}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>-->
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>            
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
